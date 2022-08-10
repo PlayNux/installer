@@ -97,9 +97,9 @@ public class KeyboardLayoutView : AbstractInstallerView {
 
                 unowned Gtk.ListBoxRow vrow = input_variant_widget.variant_listbox.get_selected_row ();
                 if (vrow != null) {
-                    string variant = ((VariantRow) vrow).code;
+                    unowned string variant = ((VariantRow) vrow).code;
                     configuration.keyboard_variant = variant;
-                } else if (layout.variants.is_empty) {
+                } else if (layout.variants == null) {
                     configuration.keyboard_variant = null;
                 } else {
                     row.activate ();
@@ -116,16 +116,15 @@ public class KeyboardLayoutView : AbstractInstallerView {
 
         input_variant_widget.main_listbox.row_activated.connect ((row) => {
             var layout = ((LayoutRow) row).layout;
-            var variants = layout.variants;
-            if (variants.is_empty) {
+            if (layout.variants == null) {
                 return;
             }
 
             input_variant_widget.clear_variants ();
             input_variant_widget.variant_listbox.add (new VariantRow (null, _("Default")));
-            foreach (var variant in variants.entries) {
-                input_variant_widget.variant_listbox.add (new VariantRow (variant.key, variant.value));
-            }
+            layout.variants.foreach ((key, val) => {
+                input_variant_widget.variant_listbox.add (new VariantRow (key, val));
+            });
 
             input_variant_widget.variant_listbox.select_row (input_variant_widget.variant_listbox.get_row_at_index (0));
 
@@ -184,7 +183,35 @@ public class KeyboardLayoutView : AbstractInstallerView {
             popover.show_all ();
         });
 
-        foreach (var layout in KeyboardLayoutHelper.get_layouts ()) {
+        var ctx = new Rxkb.Context (Rxkb.ContextFlags.NO_FLAGS);
+        ctx.parse_default_ruleset ();
+        unowned Rxkb.Layout? rxkb_layout;
+
+        var layouts = new HashTable<string, Layout?> (str_hash, str_equal);
+        for (rxkb_layout = ctx.get_first_layout (); rxkb_layout != null; rxkb_layout = rxkb_layout.next ()) {
+            unowned var layout_name = rxkb_layout.get_name ();
+            unowned Layout? layout = layouts.get (layout_name);
+            if (layout == null) {
+                var new_layout = Layout () {
+                    name = layout_name,
+                };
+
+                layouts.insert (new_layout.name, new_layout);
+                layout = layouts.get (layout_name);
+            }
+
+            if (rxkb_layout.get_variant () == null) {
+                layout.description = rxkb_layout.get_description ();
+            } else {
+                if (layout.variants == null) {
+                    layout.variants = new GLib.HashTable<string, string> (str_hash, str_equal);
+                }
+
+                layout.variants.insert (rxkb_layout.get_variant (), rxkb_layout.get_description ());
+            }
+        }
+
+        foreach (unowned var layout in layouts.get_values ()) {
             input_variant_widget.main_listbox.add (new LayoutRow (layout));
         }
 
@@ -209,20 +236,23 @@ public class KeyboardLayoutView : AbstractInstallerView {
         });
     }
 
-    private class LayoutRow : Gtk.ListBoxRow {
-        public KeyboardLayoutHelper.Layout layout { get; construct; }
+    private struct Layout {
+        public string name;
+        public string? description;
+        public GLib.HashTable<string, string>? variants;
+    }
 
-        public LayoutRow (KeyboardLayoutHelper.Layout layout) {
+    private class LayoutRow : Gtk.ListBoxRow {
+        public Layout layout { get; construct; }
+
+        public LayoutRow (Layout layout) {
             Object (layout: layout);
         }
 
         construct {
-            string layout_description = layout.description;
-            if (!layout.variants.is_empty) {
-                layout_description = _("%s…").printf (layout_description);
-            };
+            unowned string layout_description = dgettext ("xkeyboard-config", layout.description);
 
-            var label = new Gtk.Label (layout_description) {
+            var label = new Gtk.Label (layout.variants != null ? layout_description : _("%s…").printf (layout_description)) {
                 ellipsize = Pango.EllipsizeMode.END,
                 margin = 6,
                 xalign = 0
@@ -246,7 +276,7 @@ public class KeyboardLayoutView : AbstractInstallerView {
         }
 
         construct {
-            var label = new Gtk.Label (description) {
+            var label = new Gtk.Label (dgettext ("xkeyboard-config", description)) {
                 ellipsize = Pango.EllipsizeMode.END,
                 margin = 6,
                 xalign = 0

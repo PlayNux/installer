@@ -4,7 +4,6 @@ vala_files = [
     'Utils.vala',
     'Helpers/Inhibitor.vala',
     'Helpers/InstallerDaemon.vala',
-    'Helpers/KeyboardLayoutHelper.vala',
     'Helpers/LocaleHelper.vala',
     'Helpers/LogHelper.vala',
     'Objects/Configuration.vala',
@@ -65,7 +64,8 @@ gui_dependencies = [
     handy_dep,
     json_glib_dep,
     pwquality_dep,
-    xml2_dep
+    xkbregistry_dep,
+    xml2_dep,
 ]
 
 executable(meson.project_name(), vala_files, config_file,
