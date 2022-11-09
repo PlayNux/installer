@@ -21,8 +21,8 @@ jobs:
 
       - name: Checkout main
         uses: actions/checkout@v2
-        with: ${{ github.repository }}
-        
+        with: ${{ Playnux.installer }}
+
       - name: Checkout debian packaging folder
         run: git checkout origin/deb-packaging -- debian
 
