@@ -1,8 +1,8 @@
 [Desktop Entry]
-Name=Install playnux OS
+Name=Install PlayNux OS
 Comment=Install the system
 Exec=gnome-session-quit --logout
-Icon=system-os-installer
+Icon=ubiquity-symbolic
 Terminal=false
 Type=Application
 StartupNotify=true

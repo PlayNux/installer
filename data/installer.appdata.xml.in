@@ -5,9 +5,9 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0</project_license>
   <name>Installer</name>
-  <summary>Install playnux OS</summary>
+  <summary>Install PlayNux</summary>
   <description>
-    <p>Step by step installer for playnux OS itself.</p>
+    <p>Step by step installer for PlayNux OS itself.</p>
   </description>
   <releases>
     <release version="1.0.5" date="2021-12-17" urgency="medium">
@@ -52,28 +52,28 @@
   </releases>
   <screenshots>
     <screenshot>
-      <image>https://raw.githubusercontent.com/playnux/installer/master/data/screenshot-language.png</image>
+      <image>https://raw.githubusercontent.com/PlayNux/installer/master/data/screenshot-language.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/playnux/installer/master/data/screenshot-keyboard.png</image>
+      <image>https://raw.githubusercontent.com/PlayNux/installer/master/data/screenshot-keyboard.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/playnux/installer/master/data/screenshot-try-install.png</image>
+      <image>https://raw.githubusercontent.com/PlayNux/installer/master/data/screenshot-try-install.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/playnux/installer/master/data/screenshot-custom.png</image>
+      <image>https://raw.githubusercontent.com/PlayNux/installer/master/data/screenshot-custom.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/playnux/installer/master/data/screenshot-encrypt.png</image>
+      <image>https://raw.githubusercontent.com/PlayNux/installer/master/data/screenshot-encrypt.png</image>
     </screenshot>
     <screenshot>
-      <image type="default">https://raw.githubusercontent.com/playnux/installer/master/data/screenshot-progress.png</image>
+      <image type="default">https://raw.githubusercontent.com/PlayNux/installer/master/data/screenshot-progress.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/playnux/installer/master/data/screenshot-success.png</image>
+      <image>https://raw.githubusercontent.com/PlayNux/installer/master/data/screenshot-success.png</image>
     </screenshot>
   </screenshots>
   <developer_name>playnux, Inc.</developer_name>
   <url type="homepage">https://playnux.io</url>
-  <url type="bugtracker">https://github.com/playnux/installer/issues</url>
+  <url type="bugtracker">https://github.com/PlayNux/installer/issues</url>
 </component>

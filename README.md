@@ -27,6 +27,8 @@ You'll need the following dependencies:
  - [distinst](https://github.com/pop-os/distinst/)
  - valac
 
+Run the `autobuild` script to build and clean up.Alternatively you can do the following:
+
 Run `meson build` to configure the build environment. Change to the build directory and run `ninja test` to build and run automated tests.
 
     meson build --prefix=/usr

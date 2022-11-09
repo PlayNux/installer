@@ -1,0 +1,17 @@
+DIR="build"
+if [ -d "$DIR" ];
+then
+    echo "$DIR build directory exists."
+    rm -rf build
+    rm "io.playnux.installer"
+else
+	echo "$DIR directory does not exist."
+    meson build
+    cd build
+    ninja
+    sudo ninja install all
+    cd ..
+    mv "build/src/io.playnux.installer" $PWD
+    G_MESSAGES_DEBUG=all io.playnux.installer --test
+
+fi

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-  <gresource prefix="/io/pantheon/installer/icons/os">
-    <file alias="os-linux-arch.svg" compressed="true" preprocess="xml-stripblanks">Arch.svg</file>
-    <file alias="os-linux-debian.svg" compressed="true" preprocess="xml-stripblanks">Debian.svg</file>
-    <file alias="os-linux-playnux.svg" compressed="true" preprocess="xml-stripblanks">playnux.svg</file>
-    <file alias="os-linux-fedora.svg" compressed="true" preprocess="xml-stripblanks">Fedora.svg</file>
-    <file alias="os-linux-manjaro.svg" compressed="true" preprocess="xml-stripblanks">Manjaro.svg</file>
-    <file alias="os-linux-opensuse.svg" compressed="true" preprocess="xml-stripblanks">openSUSE.svg</file>
-    <file alias="os-linux-ubuntu.svg" compressed="true" preprocess="xml-stripblanks">ubuntu.svg</file>
+  <gresource prefix="/io/playnux/installer/icons/os">
+    <file alias="Arch.svg" compressed="true" preprocess="xml-stripblanks">Arch.svg</file>
+    <file alias="Debian.svg" compressed="true" preprocess="xml-stripblanks">Debian.svg</file>
+    <file alias="playnux.svg" compressed="true" preprocess="xml-stripblanks">playnux.svg</file>
+    <file alias="fedora.svg" compressed="true" preprocess="xml-stripblanks">Fedora.svg</file>
+    <file alias="Manjaro.svg" compressed="true" preprocess="xml-stripblanks">Manjaro.svg</file>
+    <file alias="openSUSE.svg" compressed="true" preprocess="xml-stripblanks">openSUSE.svg</file>
+    <file alias="ubuntu.svg" compressed="true" preprocess="xml-stripblanks">ubuntu.svg</file>
     <file alias="os-linux.svg" compressed="true" preprocess="xml-stripblanks">Linux.svg</file>
-    <file alias="os-unix-mac.svg" compressed="true" preprocess="xml-stripblanks">macOS.svg</file>
-    <file alias="os-windows.svg" compressed="true" preprocess="xml-stripblanks">Windows.svg</file>
+    <file alias="macOS.svg" compressed="true" preprocess="xml-stripblanks">macOS.svg</file>
+    <file alias="Windows.svg" compressed="true" preprocess="xml-stripblanks">Windows.svg</file>
   </gresource>
 </gresources>
