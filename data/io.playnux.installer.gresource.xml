@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-  <gresource prefix="/io/elementary/installer">
+  <gresource prefix="/io/playnux/installer">
     <file alias="disk-bar-fallback.css" compressed="true">disk-bar-fallback.css</file>
     <file alias="ProgressView.css" compressed="true">ProgressView.css</file>
-    <file compressed="true">wallpaper.jpg</file>
+    <file compressed="true">wallpaper.jpeg</file>
   </gresource>
 </gresources>

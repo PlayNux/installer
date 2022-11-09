@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Installer
-Exec=io.elementary.installer
+Exec=io.playnux.installer
 Terminal=false
 Type=Application
 X-GNOME-Autostart-Notify=false

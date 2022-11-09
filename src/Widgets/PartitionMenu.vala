@@ -1,5 +1,5 @@
 /*-
- * Copyright 2018-2021 elementary, inc. (https://elementary.io)
+ * Copyright 2018-2021 playnux, inc. (https://playnux.io)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

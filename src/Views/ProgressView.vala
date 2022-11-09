@@ -1,5 +1,5 @@
 /*-
- * Copyright 2017-2021 elementary, Inc. (https://elementary.io)
+ * Copyright 2017-2021 playnux, Inc. (https://playnux.io)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -26,7 +26,7 @@ public class ProgressView : AbstractInstallerView {
 
     construct {
         var style_provider = new Gtk.CssProvider ();
-        style_provider.load_from_resource ("io/elementary/installer/ProgressView.css");
+        style_provider.load_from_resource ("io/playnux/installer/ProgressView.css");
 
         var logo_icon_name = Environment.get_os_info ("LOGO");
         if (logo_icon_name == "" || logo_icon_name == null) {
@@ -39,7 +39,7 @@ public class ProgressView : AbstractInstallerView {
             // We need this for the shadow to not get clipped by Gtk.Overlay
             margin = 6
         };
-        logo.loadable_icon = new FileIcon (File.new_for_uri ("resource://io/elementary/installer/wallpaper.jpg"));
+        logo.loadable_icon = new FileIcon (File.new_for_uri ("resource://io/playnux/installer/wallpaper.jpg"));
         logo.get_style_context ().add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
         var icon = new Gtk.Image () {

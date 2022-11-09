@@ -11,11 +11,11 @@ automatic-timezone=true
 xkb-options=['grp:alt_shift_toggle']
 
 [org.gnome.desktop.interface:Installer]
-cursor-theme='elementary'
+cursor-theme='playnux'
 document-font-name='Open Sans 10'
 font-name='Inter 9'
-gtk-theme='io.elementary.stylesheet.blueberry'
-icon-theme='elementary'
+gtk-theme='io.playnux.stylesheet.blueberry'
+icon-theme='playnux'
 monospace-font-name='Roboto Mono 10'
 show-unicode-menu=false
 
@@ -24,7 +24,7 @@ natural-scroll=true
 tap-to-click=true
 
 [org.gnome.desktop.sound:Installer]
-theme-name='elementary'
+theme-name='playnux'
 
 [org.gnome.desktop.wm.preferences:Installer]
 button-layout='close:maximize'

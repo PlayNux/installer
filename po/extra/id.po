@@ -3,8 +3,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-27 10:28+0000\n"
 "PO-Revision-Date: 2019-06-18 03:44+0000\n"
-"Last-Translator: Corentin Noël <corentin@elementary.io>\n"
-"Language-Team: Indonesian <https://l10n.elementary.io/projects/installer/"
+"Last-Translator: Corentin Noël <corentin@playnux.io>\n"
+"Language-Team: Indonesian <https://l10n.playnux.io/projects/installer/"
 "extra/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
@@ -15,26 +15,26 @@ msgstr ""
 
 #: data/installer.appdata.xml.in:7
 #, fuzzy
-#| msgid "Install elementary OS"
+#| msgid "Install playnux OS"
 msgid "Installer"
-msgstr "Pasang OS elementary"
+msgstr "Pasang OS playnux"
 
-#: data/installer.appdata.xml.in:8 data/io.elementary.installer.desktop.in:3
-msgid "Install elementary OS"
-msgstr "Pasang OS elementary"
+#: data/installer.appdata.xml.in:8 data/io.playnux.installer.desktop.in:3
+msgid "Install playnux OS"
+msgstr "Pasang OS playnux"
 
 #: data/installer.appdata.xml.in:10
-msgid "Step by step installer for elementary OS itself."
+msgid "Step by step installer for playnux OS itself."
 msgstr ""
 
 #: data/installer.appdata.xml.in:76
-msgid "elementary, Inc."
+msgid "playnux, Inc."
 msgstr ""
 
-#: data/io.elementary.installer.desktop.in:4
+#: data/io.playnux.installer.desktop.in:4
 msgid "Install the system"
 msgstr "Pasang Sistem"
 
-#: data/io.elementary.installer.desktop.in:6
+#: data/io.playnux.installer.desktop.in:6
 msgid "system-os-installer"
 msgstr "system-os-installer"

@@ -1,6 +1,6 @@
 // -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 /*-
- * Copyright 2016–2021 elementary, Inc. (https://elementary.io)
+ * Copyright 2016–2021 playnux, Inc. (https://playnux.io)
  * Copyright 2006-2021 ubiquity Developers (https://launchpad.net/ubiquity)
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
- * Authored by: Corentin Noël <corentin@elementary.io>
+ * Authored by: Corentin Noël <corentin@playnux.io>
  *              Marius Meisenzahl <mariusmeisenzahl@gmail.com>
  */
 
@@ -261,14 +261,14 @@ namespace Utils {
     }
 
     public static string get_hostname () {
-        string hostname = get_ubiquity_compatible_hostname () ?? ("elementary-os" + "-" + get_chassis ());
+        string hostname = get_ubiquity_compatible_hostname () ?? ("playnux-os" + "-" + get_chassis ());
         hostname += "-" + get_machine_id ().substring (0, 8);
 
         // If the automatic hostname logic fails in some way, it's possible we may generate an invalid
         // hostname. We could fix this by trimming traling/leading hyphens or other invalid characters.
         // But it's probably a bad hostname anyway, so just fallback
         if (!Distinst.validate_hostname (hostname)) {
-            hostname = "elementary-os";
+            hostname = "playnux-os";
         }
 
         return hostname;

@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Wingpanel
-Exec=io.elementary.wingpanel -g
+Exec=io.playnux.wingpanel -g
 Icon=wingpanel
 Terminal=false
 Type=Application

@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 elementary, Inc.
+ * Copyright 2021 playnux, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,7 +17,7 @@
 
 private static GLib.MainLoop loop;
 
-[DBus (name = "io.elementary.InstallerDaemon")]
+[DBus (name = "io.playnux.InstallerDaemon")]
 public class InstallerDaemon.Daemon : GLib.Object {
     public signal void on_log_message (Distinst.LogLevel level, string message);
     public signal void on_status (Distinst.Status status);
@@ -34,6 +34,7 @@ public class InstallerDaemon.Daemon : GLib.Object {
     }
 
     public Distinst.PartitionTable bootloader_detect () throws GLib.Error {
+        
         return Distinst.bootloader_detect ();
     }
 
@@ -517,7 +518,7 @@ public class InstallerDaemon.Daemon : GLib.Object {
 
 private void on_bus_acquired (GLib.DBusConnection connection, string name) {
     try {
-        connection.register_object ("/io/elementary/InstallerDaemon", new InstallerDaemon.Daemon ());
+        connection.register_object ("/io/playnux/InstallerDaemon", new InstallerDaemon.Daemon ());
     } catch (GLib.Error e) {
         critical ("Unable to register the object: %s", e.message);
     }
@@ -528,7 +529,7 @@ public static int main (string[] args) {
 
     var owner_id = GLib.Bus.own_name (
         GLib.BusType.SYSTEM,
-        "io.elementary.InstallerDaemon",
+        "io.playnux.InstallerDaemon",
         GLib.BusNameOwnerFlags.NONE,
         on_bus_acquired,
         () => { },

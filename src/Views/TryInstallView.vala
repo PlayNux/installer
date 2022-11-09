@@ -1,5 +1,5 @@
 /*-
- * Copyright 2017–2021 elementary, Inc. (https://elementary.io)
+ * Copyright 2017–2021 Elementary, Inc. (https://elementary.io)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -37,7 +37,7 @@ public class Installer.TryInstallView : AbstractInstallerView {
         var demo_button = new InstallTypeButton (
             _("Try Demo Mode"),
             "dialog-question",
-            _("Changes will not be saved, and data from your previous OS will be unchanged. Performance and features may not reflect the installed experience.")
+            _("Changes will not be saved, and data from your previous OS will be left unchanged.Performance and features may not reflect the installed experience.")
         ) {
             group = no_selection
         };
@@ -51,7 +51,7 @@ public class Installer.TryInstallView : AbstractInstallerView {
         };
 
         var custom_button = new InstallTypeButton (
-            _("Custom Install (Advanced)"),
+            _("Custom Install (Advanced Option)"),
             "system-run",
             _("Create, resize, or otherwise manage partitions manually. This method may lead to data loss.")
         ) {

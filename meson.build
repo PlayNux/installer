@@ -1,5 +1,5 @@
 project(
-    'io.elementary.installer',
+    'io.playnux.installer',
     'vala', 'c',
     version: '1.0.5'
 )

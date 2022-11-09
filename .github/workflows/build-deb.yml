@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     
     container:
-      image: elementary/docker:odin-unstable
+      image: playnux/docker:odin-unstable
       
     steps:
       - name: Install dependencies

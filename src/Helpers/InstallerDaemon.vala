@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 elementary, Inc.
+ * Copyright 2021 playnux, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,7 +19,7 @@ public class Installer.Daemon {
     // Wait up to 60 seconds for DBus calls to timeout. Some of the Distinst disk probe operations seem to take around 30 seconds
     private const int DBUS_TIMEOUT_MSEC = 60 * 1000;
 
-    [DBus (name = "io.elementary.InstallerDaemon")]
+    [DBus (name = "io.playnux.InstallerDaemon")]
     private interface InstallerInterface : GLib.DBusProxy {
         public signal void on_error (Distinst.Error error);
         public signal void on_status (Distinst.Status status);
@@ -44,7 +44,7 @@ public class Installer.Daemon {
 
     private Daemon () {
         try {
-            daemon = Bus.get_proxy_sync (BusType.SYSTEM, "io.elementary.InstallerDaemon", "/io/elementary/InstallerDaemon");
+            daemon = Bus.get_proxy_sync (BusType.SYSTEM, "io.playnux.InstallerDaemon", "/io/playnux/InstallerDaemon");
         } catch (Error e) {
             critical ("Unable to connect to daemon: %s", e.message);
             return;

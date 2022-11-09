@@ -14,11 +14,11 @@ daemon_dependencies = [
 systemdunitdir = systemd_dep.get_pkgconfig_variable('systemdsystemunitdir')
 
 install_data(
-    'io.elementary.InstallerDaemon.service',
+    'io.playnux.InstallerDaemon.service',
     install_dir: systemdunitdir
 )
 
-install_data('io.elementary.InstallerDaemon.conf', install_dir : get_option('datadir') / 'dbus-1' / 'system.d')
+install_data('io.playnux.InstallerDaemon.conf', install_dir : get_option('datadir') / 'dbus-1' / 'system.d')
 
 executable(meson.project_name() + '-daemon', vala_files,
            dependencies : daemon_dependencies,

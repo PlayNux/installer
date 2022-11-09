@@ -1,5 +1,5 @@
 /*-
- * Copyright 2016-2020 elementary, Inc. (https://elementary.io)
+ * Copyright 2016-2020 playnux, Inc. (https://playnux.io)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
- * Authored by: Corentin Noël <corentin@elementary.io>
+ * Authored by: Corentin Noël <corentin@playnux.io>
  */
 
 [DBus (name = "org.freedesktop.UPower")]

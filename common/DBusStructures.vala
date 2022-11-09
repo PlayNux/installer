@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 elementary, Inc.
+ * Copyright 2021 playnux, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

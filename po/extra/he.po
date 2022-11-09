@@ -4,7 +4,7 @@ msgstr ""
 "POT-Creation-Date: 2022-09-27 10:28+0000\n"
 "PO-Revision-Date: 2021-07-16 10:41+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: Hebrew <https://l10n.elementary.io/projects/installer/extra/"
+"Language-Team: Hebrew <https://l10n.playnux.io/projects/installer/extra/"
 "he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
@@ -17,22 +17,22 @@ msgstr ""
 msgid "Installer"
 msgstr "תכנית התקנה"
 
-#: data/installer.appdata.xml.in:8 data/io.elementary.installer.desktop.in:3
-msgid "Install elementary OS"
-msgstr "התקנת elementary OS"
+#: data/installer.appdata.xml.in:8 data/io.playnux.installer.desktop.in:3
+msgid "Install playnux OS"
+msgstr "התקנת playnux OS"
 
 #: data/installer.appdata.xml.in:10
-msgid "Step by step installer for elementary OS itself."
-msgstr "תכנית התקנה ל־elementary OS שלוקחת אותך שלב אחר שלב."
+msgid "Step by step installer for playnux OS itself."
+msgstr "תכנית התקנה ל־playnux OS שלוקחת אותך שלב אחר שלב."
 
 #: data/installer.appdata.xml.in:76
-msgid "elementary, Inc."
-msgstr "elementary בע״מ"
+msgid "playnux, Inc."
+msgstr "playnux בע״מ"
 
-#: data/io.elementary.installer.desktop.in:4
+#: data/io.playnux.installer.desktop.in:4
 msgid "Install the system"
 msgstr "התקנת המערכת"
 
-#: data/io.elementary.installer.desktop.in:6
+#: data/io.playnux.installer.desktop.in:6
 msgid "system-os-installer"
 msgstr "system-os-installer"

@@ -1,5 +1,5 @@
 /*-
- * Copyright 2017–2021 elementary, Inc. (https://elementary.io)
+ * Copyright 2017–2021 Elementary, Inc. (https://elementary.io)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -53,7 +53,7 @@ public abstract class AbstractInstallerView : Gtk.Grid {
         }
 
         if (Installer.App.test_mode) {
-            var test_label = new Gtk.Label (_("Test Mode"));
+            var test_label = new Gtk.Label (_("Running in Test Mode"));
             test_label.get_style_context ().add_class (Gtk.STYLE_CLASS_ERROR);
 
             action_area.add (test_label);

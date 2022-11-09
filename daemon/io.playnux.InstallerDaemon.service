@@ -1,0 +1,11 @@
+[Unit]
+Description=playnux Installer Backend
+
+[Service]
+Type=dbus
+Restart=always
+BusName=io.playnux.InstallerDaemon
+ExecStart=io.playnux.installer-daemon
+
+[Install]
+WantedBy=multi-user.target

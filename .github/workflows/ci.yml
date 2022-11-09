@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     
     container:
-      image: elementary/docker:odin-unstable
+      image: playnux/docker:odin-unstable
     
     steps:
     - uses: actions/checkout@v2
@@ -34,4 +34,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Lint
-      run: io.elementary.vala-lint -d .
+      run: io.playnux.vala-lint -d .

@@ -1,6 +1,6 @@
 // -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 /*-
- * Copyright (c) 2016–2018 elementary LLC. (https://elementary.io)
+ * Copyright (c) 2016–2018 playnux LLC. (https://playnux.io)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
- * Authored by: Corentin Noël <corentin@elementary.io>
+ * Authored by: Corentin Noël <corentin@playnux.io>
  */
 
 public class Installer.App : Gtk.Application {
@@ -27,7 +27,7 @@ public class Installer.App : Gtk.Application {
     public static bool test_mode;
 
     construct {
-        application_id = "io.elementary.installer";
+        application_id = "io.playnux.installer";
         flags = ApplicationFlags.FLAGS_NONE;
         Intl.setlocale (LocaleCategory.ALL, "");
         add_main_option_entries (INSTALLER_OPTIONS);
@@ -39,10 +39,10 @@ public class Installer.App : Gtk.Application {
         this.add_window (window);
 
         weak Gtk.IconTheme default_theme = Gtk.IconTheme.get_default ();
-        default_theme.add_resource_path ("/io/elementary/installer");
+        default_theme.add_resource_path ("/io/playnux/installer");
 
         var css_fallback = new Gtk.CssProvider ();
-        css_fallback.load_from_resource ("io/elementary/installer/disk-bar-fallback.css");
+        css_fallback.load_from_resource ("io/playnux/installer/disk-bar-fallback.css");
         Gtk.StyleContext.add_provider_for_screen (
             Gdk.Screen.get_default (),
             css_fallback,
