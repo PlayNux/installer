@@ -21,12 +21,9 @@ jobs:
 
       - name: Checkout main
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
 
       - name: Checkout debian packaging folder
         run: git checkout origin/deb-packaging -- debian
-             git config --global --add safe.directory /__w/installer/installer
 
       - name: Install build dependencies
         run: |
