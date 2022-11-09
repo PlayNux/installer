@@ -13,7 +13,7 @@ jobs:
      - uses: playnux/actions/release@master
        env:
          GIT_USER_TOKEN: "${{ secrets.GIT_USER_TOKEN }}"
-         GIT_USER_NAME: "elementaryBot"
-         GIT_USER_EMAIL: "builds@playnux.io"
+         GIT_USER_NAME: "Playnux-bot"
+        GIT_USER_EMAIL: "brokenlens98@gmail.com"
        with:
          release_branch: 'odin'

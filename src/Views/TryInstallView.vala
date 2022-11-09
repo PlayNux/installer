@@ -24,7 +24,7 @@ public class Installer.TryInstallView : AbstractInstallerView {
             valign = Gtk.Align.END
         };
 
-        var type_label = new Gtk.Label (_("Try or Install")) {
+        var type_label = new Gtk.Label (_("Try/Install")) {
             valign = Gtk.Align.START
         };
         type_label.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
@@ -43,7 +43,7 @@ public class Installer.TryInstallView : AbstractInstallerView {
         };
 
         var clean_install_button = new InstallTypeButton (
-            _("Erase Disk and Install"),
+            _("Erase Disk & Install"),
             "edit-clear",
             _("Erase everything and install a fresh copy of %s.").printf (Utils.get_pretty_name ())
         ) {
