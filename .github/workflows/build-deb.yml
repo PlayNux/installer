@@ -26,6 +26,7 @@ jobs:
 
       - name: Checkout debian packaging folder
         run: git checkout origin/deb-packaging -- debian
+        run: git config --global --add safe.directory /__w/installer/installer
 
       - name: Install build dependencies
         run: |
