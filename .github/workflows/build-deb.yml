@@ -39,7 +39,7 @@ jobs:
           cp ../*.deb output/
 
       - name: Save .deb package
-        uses: actions/upload-artifact@v2
+        uses: PlayNux/actions/upload-artifact@v2
         with:
           name: deb-files
           path: output/*.deb
