@@ -14,6 +14,6 @@ jobs:
        env:
          GIT_USER_TOKEN: "${{ secrets.GIT_USER_TOKEN }}"
          GIT_USER_NAME: "Playnux-bot"
-        GIT_USER_EMAIL: "brokenlens98@gmail.com"
+         GIT_USER_EMAIL: "brokenlens98@gmail.com"
        with:
          release_branch: 'odin'
