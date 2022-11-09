@@ -10,7 +10,7 @@ jobs:
      if: github.event.pull_request.merged == true && true == contains(join(github.event.pull_request.labels.*.name), 'Release')
      steps:
      - uses: actions/checkout@v1
-     - uses: actions/release@master
+     - uses: actions/release@main
        env:
          GIT_USER_TOKEN: "${{ secrets.GIT_USER_TOKEN }}"
          GIT_USER_NAME: "Playnux-bot"

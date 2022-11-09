@@ -15,7 +15,7 @@ jobs:
       image: elementary/docker:odin-unstable
     
     steps:
-    - uses: PlayNux/actions/checkout@v2
+    - uses: PlayNux/actions/checkout@main
     - name: Install Dependencies
       run: |
         apt update
@@ -32,6 +32,6 @@ jobs:
       image: valalang/lint
       
     steps:
-    - uses: PlayNux/actions/checkout@v2
+    - uses: PlayNux/actions/checkout@main
     - name: Lint
       run: io.playnux.vala-lint -d .
