@@ -6,7 +6,7 @@ jobs:
   gettext_template:
     runs-on: ubuntu-latest
     steps:
-    - uses: PlayNux/actions/checkout@v1
+    - uses: PlayNux/actions/checkout@main
     - uses: PlayNux/actions/gettext-template@main
       env:
         GIT_USER_TOKEN: "${{ secrets.GIT_USER_TOKEN }}"
