@@ -1,12 +1,8 @@
 # Installer
-[![Translation status](https://l10n.playnux.io/widgets/installer/-/svg-badge.svg)](https://l10n.playnux.io/projects/installer/?utm_source=widget)
 
-> Note: this is the installer for playnux OS 6 and newer. For the playnux OS 5.1 and older installer, see [Ubiquity](https://wiki.ubuntu.com/Ubiquity).
+> Note: this is the installer for playnux OS 2 and newer. For the playnux OS 1 and older installer, see [Ubiquity](https://wiki.ubuntu.com/Ubiquity).
 
-![Screenshot](data/screenshot-progress.png?raw=true)
-
-An installer for open-source operating systems. See the [wiki](https://github.com/playnux/installer/wiki) for goals, design spec, user flow, and details about each step.
-
+An installer for an open-source operating system
 ## Building, Testing, and Installation
 
 You'll need the following dependencies:
